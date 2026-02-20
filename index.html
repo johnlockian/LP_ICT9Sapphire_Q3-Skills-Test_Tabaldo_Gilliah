@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; 
+rel="stylesheet">
+</head>
+<style>
+
+   html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: #0f0f0f;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #bed3d6;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .book-btn {
+        background: #00bcd4;
+        color: white;
+    }
+
+    .account-btn {
+        background: #ff9800;
+        color: white;
+    }
+   
+    
+.two-columns {
+    display:flex;
+}
+
+
+.two-columns > * {
+    width:50%;
+    padding:1rem;
+}
+
+.main-div{
+    background: #bed3d6;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.div-1{
+    background: #aec3c6;
+    
+}
+
+.div-2{
+    margin: 10px;
+}
+.container {
+        padding: 40px;
+        border-radius: 10px;
+        width: 350px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #546261, #8fc9c7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        border: none;
+        background: #00bcd4;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #0097a7;
+    }
+
+.aligned-1 {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+}
+.aligned {
+  display: inline-block;
+  width: 58%;
+  vertical-align: top; 
+}
+
+.checkboxed{
+    background: #8fb8bd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.submit{
+        cursor: pointer;
+}
+
+.nav-item{
+            color: white;
+        font-weight: bold;
+}
+</style>
+<body>
+<nav>
+     <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+           
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" target="_self">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_self">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" target="_self">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="enroll.html" target="_self">Enroll</a>
+                    </li>
+
+
+                </ul>
+
+                    <div class="nav-right">
+        <button class="btn book-btn" onclick="scrollToTop()">Book Now</button>
+        <button class="btn account-btn" onclick="createAccount()">Create Account</button>
+    </div>
+
+            </div>
+
+        </div>
+    </nav>
+</nav>
+<div class="two-columns main-div" style="margin: 50px;">
+    <div class="div-1"
+    style="border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px; text-align: center;"><br><br><br>
+    <img src="https://static.thenounproject.com/png/1095867-200.png" style="width: 150px;"><br><br><br>
+    <form>
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form></div>
+    <br><br><br>
+    <div class="div-2">
+        <div>
+    <h2>REGISTRATION.</h2>
+
+    <form>
+        <input type="text" placeholder="First Name" required>
+        <input type="text"placeholder="Last Name" required>
+        <input class="aligned-1" type="text" placeholder="Age" required>
+        <input class="aligned" type="text" placeholder="Contact Number" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <br>
+        <br>
+        <div class="checkboxed"><input type="checkbox" required>I accept the Terms of Use and Privacy Policy.</div>
+        <button type="submit" onclick="createUser()">Sign Up</button>
+    </form>
+</div>
+    </div>
+</div>
+<script>
+    function createUser() {
+        alert("Account created successfully!");
+        window.location.href = "index.html";
+        return false;
+    }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
